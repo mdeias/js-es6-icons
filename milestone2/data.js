@@ -126,7 +126,7 @@ listaElementi.forEach ((elemento) => {
        const boxIcons = document.createElement("div");
 		boxIcons.classList.add("box-icona");
 		boxIcons.innerHTML = `
-		<i class="${elemento.family} ${elemento.prefix + elemento.name}"><i/>
+		<i class="${elemento.family} ${elemento.prefix + elemento.name} ${elemento.color}"><i/>
 		<p class="nome"> ${elemento.name} <p/>
 		`;
 		
@@ -137,6 +137,8 @@ listaElementi.forEach ((elemento) => {
 
 // **Milestone 2**
 // Ciascuna icona ha una proprietà “color”: utilizzare questa proprietà per visualizzare le icone del colore corrispondente.
+
+
 
 // **Milestone 3**
 // Aggiungere alla pagina una select in cui le options corrispondono ai vari tipi di icone *(animal, vegetable, user)*. Quando l’utente seleziona un tipo dalla select, visualizzare solamente le icone corrispondenti.
