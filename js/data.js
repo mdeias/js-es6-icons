@@ -126,8 +126,8 @@ listaElementi.forEach ((elemento) => {
        const boxIcons = document.createElement("div");
 		boxIcons.classList.add("box-icona");
 		boxIcons.innerHTML = `
-		<span> ${elemento.prefix + elemento.type} </>
-		<span> ${elemento.name} </>
+		<i class="${elemento.family} ${elemento.prefix + elemento.name}"><i/>
+		<p class="nome"> ${elemento.name} <p/>
 		`;
 		
 		contenitore.append(boxIcons);

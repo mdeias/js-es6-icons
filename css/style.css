@@ -33,11 +33,17 @@ h6{
     justify-content: center;
     align-items: center;
     height: 90px;
+    text-align: center;
     width: 14%;
     float: left;
     margin: 20px 50px 50px 35px;
     background-color: #fff;
     border-radius: 20px;
     box-shadow: 1px 1px 1px 1px gray;
+}
+
+.nome{
+    font-size: 13px;
+    margin-top: 15px;
 }
 
