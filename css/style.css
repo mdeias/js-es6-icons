@@ -1,0 +1,43 @@
+
+
+
+.logo{
+    height: 60px;
+    padding-left: 35px;
+}
+
+h1{
+    color: #28B1DC;
+}
+
+h6{
+    margin-top: 8px;
+    margin-right: 10px;
+    color: white;
+}
+.select{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    background-color: #28B1DC;
+}
+
+.container-icons{
+    height: calc(100vh - 120px);
+    background-color: lightgray;
+}
+
+.box-icona{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90px;
+    width: 14%;
+    float: left;
+    margin: 20px 50px 50px 35px;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 1px 1px 1px 1px gray;
+}
+
