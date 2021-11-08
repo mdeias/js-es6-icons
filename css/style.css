@@ -24,7 +24,7 @@ h6{
 }
 
 .container-icons{
-    height: calc(100vh - 120px);
+    min-height: 800px;
     background-color: lightgray;
 }
 
