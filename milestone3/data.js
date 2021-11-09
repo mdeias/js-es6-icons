@@ -1,4 +1,5 @@
-const listaElementi = [
+
+const icone = [
 	{
 		name: 'cat',
 		prefix: 'fa-',
@@ -114,44 +115,61 @@ const listaElementi = [
 ];
 
 
-// **Milestone 3**
-// Aggiungere alla pagina una select in cui le options corrispondono ai vari tipi di icone *(animal, vegetable, user)*. Quando l’utente seleziona un tipo dalla select, visualizzare solamente le icone corrispondenti.
 
-// creo un ciclo filter che mi restituisce i nomi e le icone
+// funzione che genera le icone 
+
+const generaIcone = (icona) => {
+
+	const {name, prefix, family, color} = icona;
+
+	const boxIcona = `
+	<div class="box-icona">
+	<i class="${family} ${prefix}${name}" style="color: ${color}; font-size: 30px; margin-top: 15px"=></i>
+	<p class="nome">${name}</p>
+	</div>
+	`;
+	
+	return boxIcona;
+	
+}
+
+// funzione per stampare le icone 
+
+const stampaIcone = (iconeDaStampare) => {
+
+	contenitore.innerHTML = "";
+	
+	iconeDaStampare.forEach( (icona) => {
+
+		contenitore.innerHTML += generaIcone(icona);
+	
+	});
+}
+
+// funzione che durante la selezione mi permette di stampare le giuste icone
+
+const selezione = (event) => {
+
+	const selezionaTipo = event.target.value;
+	let iconeSelezionate = [];
+
+	if (selezionaTipo === "all") {
+		iconeSelezionate = icone;
+	}else{
+		iconeSelezionate = icone.filter((icona) => {
+			return selezionaTipo === icona.type;
+		});	
+	}
+	stampaIcone(iconeSelezionate);
+}
+
+
 const contenitore = document.querySelector(".container-icons");
 console.log(contenitore);
 
-listaElementi.forEach ((elemento) => {
+document.querySelector("select").addEventListener("change", selezione);
 
-	
-	
-    const boxIcons = document.createElement("div");
-	boxIcons.classList.add("box-icona");
-	boxIcons.innerHTML = `
-	<i class="${elemento.family} ${elemento.prefix + elemento.name} ${elemento.color}"><i/>
-	<p class="nome"> ${elemento.name.toUpperCase()} <p/>
-	`;
-
-
-	// tentativo di risolvere il milestone3
-	document.getElementById('filtro').addEventListener("select",function(){
-		
-		let opzioni = parseInt(document.getElementById("filtro").value);
-		if (elemento.type === "user" && opzioni === 4 ) {
-			boxIcons.classList.add("active");
-		}else if (elemento.type == "vegetable" && opzioni === 3) {
-			boxIcons.classList.add("active");
-		}else if (elemento.type == "animal" && opzioni === 2) {
-			boxIcons.classList.add("active");
-		}
-		console.log(elemento.type);
-
-	})
-	
-	contenitore.append(boxIcons);
-	console.log(boxIcons);
-})
-
+stampaIcone(icone);
 
 
 

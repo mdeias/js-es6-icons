@@ -32,10 +32,6 @@ h6{
 }
 
 .box-icona{
-    display: flex;
-    display: none;
-    justify-content: center;
-    align-items: center;
     height: 90px;
     text-align: center;
     width: 14%;
@@ -48,29 +44,10 @@ h6{
 
 .nome{
     font-size: 13px;
-    margin-top: 15px;
     color: #000;
 }
 
-.blue{
-    color: blue;
-    font-size: 35px;
-}
-
-.orange{
-    color: orange;
-    font-size: 35px;
-}
-
-.green{
-    color: green;
-    font-size: 35px;
-}
 
 
-.box-icona.active{
-    display: inline-block;
-    font-size: 35px;
-}
 
 
